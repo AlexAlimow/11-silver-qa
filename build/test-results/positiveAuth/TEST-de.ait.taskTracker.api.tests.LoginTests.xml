@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.ait.taskTracker.api.tests.LoginTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-10T12:16:37" hostname="DESKTOP-IDPAKS2" time="1.367">
+  <properties/>
+  <testcase name="authSuccessTest" classname="de.ait.taskTracker.api.tests.LoginTests" time="1.367"/>
+  <system-out><![CDATA[14:16:37.743 [Test worker] INFO  d.a.taskTracker.api.config.TestBase -- logger info: authSuccessTest with data: []
+14:16:37.743 [Test worker] INFO  d.a.taskTracker.api.config.TestBase -- Authentication with email - tes_dev@upteams.de and password - 123456789 
+eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXNfZGV2QHVwdGVhbXMuZGUiLCJleHAiOjE3NDY4Nzk5OTl9.vgSgoLLImQElhzttVPlBwjnU0IfR3k-1jB5dS4_yh-k
+14:16:39.126 [Test worker] INFO  d.a.taskTracker.api.config.TestBase -- PASSED: authSuccessTest
+14:16:39.126 [Test worker] INFO  d.a.taskTracker.api.config.TestBase -- ===============================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

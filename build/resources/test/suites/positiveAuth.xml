@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="User" verbose="1">
+    <test name="Authentication">
+        <classes>
+            <class name="de.ait.taskTracker.api.tests.LoginTests"/>
+        </classes>
+    </test>
+</suite>

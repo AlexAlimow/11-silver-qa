@@ -1,0 +1,24 @@
+.gradle
+build/classes
+build/generated
+build/reports
+build/tmp
+
+### IntelliJ IDEA ###
+*.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+### Mac OS ###
+.DS_Store
+
+*.log
+.*png
+
+\gradlew
+\gradle\
+gradlew.bat
+settings.gradle
+gradle/
