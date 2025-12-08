@@ -1,4 +1,4 @@
-package de.ait.taskTracker.api.tests;
+package de.ait.taskTracker.gui.tests;
 
 import de.ait.taskTracker.dto.AuthRequestDto;
 import de.ait.taskTracker.gui.core.TestBase;
