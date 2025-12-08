@@ -17,11 +17,9 @@ import java.time.Duration;
 public class ApplicationManager {
 
     public static Logger logger = LoggerFactory.getLogger(AppConfigApi.class);
-
     public static SoftAssert softly = new SoftAssert();
 
     public WebDriver driver;
-
     String browser;
 
     public ApplicationManager(String browser) {
@@ -38,7 +36,6 @@ public class ApplicationManager {
         WebDriverListener listener = new MyListener();
         driver = new EventFiringDecorator<>(listener).decorate(driver);
 
-        driver.get("");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -46,6 +43,13 @@ public class ApplicationManager {
     }
 
     public void stopTest() {
-        driver.quit();
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+
+    // ✅ добавляем геттер
+    public WebDriver getDriver() {
+        return driver;
     }
 }
