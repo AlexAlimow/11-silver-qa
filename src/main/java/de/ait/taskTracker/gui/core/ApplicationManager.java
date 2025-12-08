@@ -4,6 +4,7 @@ import de.ait.taskTracker.config.AppConfigApi;
 import de.ait.taskTracker.utils.MyListener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
@@ -27,8 +28,27 @@ public class ApplicationManager {
     }
 
     public WebDriver startTest() {
+
         switch (browser) {
-            case "chrome" -> driver = new ChromeDriver();
+            case "chrome" -> {
+                ChromeOptions options = new ChromeOptions();
+
+                // 🔥 Основные флаги, отключающие окно "Continue as Test"
+                options.addArguments("--disable-features=ChromeBrowserCloudManagement");
+                options.addArguments("--disable-features=AccountConsistency");
+                options.addArguments("--disable-features=DeviceAccountConsistency");
+                options.addArguments("--disable-sync");
+
+                // 🔧 Убираем приветственные экраны Chrome
+                options.addArguments("--no-first-run");
+                options.addArguments("--no-default-browser-check");
+
+                // Можно включить инкогнито, чтобы не грузились аккаунты Chrome
+                options.addArguments("--incognito");
+
+                driver = new ChromeDriver(options);
+            }
+
             case "firefox" -> driver = new FirefoxDriver();
             case "edge" -> driver = new EdgeDriver();
         }
@@ -48,7 +68,6 @@ public class ApplicationManager {
         }
     }
 
-    // ✅ добавляем геттер
     public WebDriver getDriver() {
         return driver;
     }
