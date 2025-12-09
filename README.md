@@ -24,9 +24,9 @@
 1. Install **JDK 17+**
 2. Setup a **MySQL** database with the required schema
 3. Configure DB connection and properties in:
-   - `src/main/java/de/ait/taskTracker/config/PropertiesLoader.java`
-   - `src/main/java/de/ait/taskTracker/dataBase/`
-   - `test/resources/data.properties`
+    - `src/main/java/de/ait/taskTracker/config/PropertiesLoader.java`
+    - `src/main/java/de/ait/taskTracker/dataBase/`
+    - `test/resources/data.properties`
 ---
 
 ## 📦 Build and Test Execution
