@@ -1,6 +1,6 @@
-# TaskTrackerQA
+# Super Tutur
 
-**TaskTrackerQA** is a test automation project for the Task Tracker application. It covers UI, API, and database testing using Java, TestNG, Selenium WebDriver, Rest Assured, JDBC, and Gradle. The architecture follows the Page Object Model and supports modular and reusable components.
+**Super Tutor** is a test automation project for the Task Tracker application. It covers UI, API, and database testing using Java, TestNG, Selenium WebDriver, Rest Assured, JDBC, and Gradle. The architecture follows the Page Object Model and supports modular and reusable components.
 
 ---
 
@@ -18,37 +18,6 @@
 
 ---
 
-## 📂 Project Structure
-```
-src/
-main/java/de/ait/taskTracker/
-├─ api/
-│ ├─ endpoints/ # API request methods
-│ └─ objects/ # Entities with Lombok
-├─ config/ # Logger, SoftAssert, PropertiesLoader
-├─ dataBase/ # DB connection and config variables
-├─ dto/ # DTO objects (fields)
-├─ gui/
-│ ├─ core/ # BasePage and core UI classes
-│ └─ pages/ # UI page methods
-└─ utils/ # DataProvider, RetryAnalyzer, Listeners, PropertiesLoader
-
-test/java/de/ait/taskTracker/
-├─ api/
-│ ├─ config/ # Base API test class
-│ └─ tests/ # API tests
-├─ gui/
-│ ├─ core/ # Base UI test class
-│ └─ tests/ # UI tests
-
-test/resources/
-├─ suites/ # TestNG XML suite files
-├─ data/ # CSV files for DataProvider
-├─ data.properties # Configuration properties
-└─ logback.xml # Logging configuration
-build.gradle
-```
----
 
 ## ⚙️ Setup Instructions
 
@@ -79,9 +48,9 @@ Run with a specific browser:
 gradle positiveAuth -Dbrowser=edge
 
 ## 🧪 Test Coverage
-- **API tests**: test/java/de/ait/taskTracker/api/tests/, use Rest Assured and extend base API TestBase.
+- **API tests**: test/java/de/ait/SuperTutor/api/tests/, use Rest Assured and extend base API TestBase.
 
-- **UI tests**: test/java/de/ait/taskTracker/gui/tests/, use Selenium WebDriver and Page Object Model.
+- **UI tests**: test/java/de/ait/SuperTutor/gui/tests/, use Selenium WebDriver and Page Object Model.
 
 - **Database tests**: use JDBC repositories and DB utilities.
 
@@ -92,7 +61,7 @@ gradle positiveAuth -Dbrowser=edge
 
 3. Add DTOs in dto/ and DB logic in dataBase/.
 
-4. Write tests in corresponding test/java/de/ait/taskTracker/{api|gui}/tests/.
+4. Write tests in corresponding test/java/de/ait/SuperTutor/{api|gui}/tests/.
 
 5. Add test data in test/resources/data/.
 
