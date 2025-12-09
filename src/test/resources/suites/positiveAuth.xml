@@ -3,7 +3,7 @@
 <suite name="User" verbose="1">
     <test name="Authentication">
         <classes>
-            <class name="de.ait.taskTracker.api.tests.LoginTests"/>
+            <class name="de.ait.SuperTutor.api.tests.LoginTests"/>
         </classes>
     </test>
 </suite>
