@@ -1,4 +1,4 @@
-# Super Tutur
+# Super Tutor
 
 **Super Tutor** is a test automation project for the Task Tracker application. It covers UI, API, and database testing using Java, TestNG, Selenium WebDriver, Rest Assured, JDBC, and Gradle. The architecture follows the Page Object Model and supports modular and reusable components.
 
