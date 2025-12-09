@@ -39,7 +39,7 @@ public class LoginUITest extends BaseLoginTest {
     }
 
 
-    @Test
+    @Test(groups = {"login"})
     public void loginSuccessMockTest() {
 
         UIHelper ui = new UIHelper(app.getDriver());
@@ -80,7 +80,7 @@ public class LoginUITest extends BaseLoginTest {
 //        assertLoggedIn();
 //    }
 
-    @Test(dataProvider = "defaultUserData", dataProviderClass = MyDataProvider.class)
+    @Test(groups = {"login"}, dataProvider = "defaultUserData", dataProviderClass = MyDataProvider.class)
     public void loginTest(AuthRequestDto user) {
         ui = new UIHelper(app.getDriver());
 

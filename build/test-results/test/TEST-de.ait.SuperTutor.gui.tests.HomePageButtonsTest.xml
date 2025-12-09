@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.ait.SuperTutor.gui.tests.HomePageButtonsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-09T09:38:56.808Z" hostname="ALEX" time="0.192">
+  <properties/>
+  <testcase name="TC01_checkHomePageButtons" classname="de.ait.SuperTutor.gui.tests.HomePageButtonsTest" time="0.192"/>
+  <system-out><![CDATA[10:38:56.579 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- Start test TC01_checkHomePageButtons with data: []
+10:38:56.581 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- Open URL - https://11-silver.vercel.app/
+10:38:56.808 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- Open URL - https://11-silver.vercel.app/
+10:38:56.921 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: header nav svg.lucide-log-in]}
+10:38:56.974 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: a[href='/decks']]}
+10:38:57.001 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- PASSED: TC01_checkHomePageButtons
+10:38:57.001 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- Stop test
+10:38:57.001 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- **********************************************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

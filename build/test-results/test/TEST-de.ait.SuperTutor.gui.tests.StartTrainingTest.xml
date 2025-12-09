@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.ait.SuperTutor.gui.tests.StartTrainingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-09T09:38:57.199Z" hostname="ALEX" time="1.66">
+  <properties/>
+  <testcase name="TC03_startTrainingNavigation" classname="de.ait.SuperTutor.gui.tests.StartTrainingTest" time="1.66"/>
+  <system-out><![CDATA[10:38:57.006 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- Start test TC03_startTrainingNavigation with data: []
+10:38:57.007 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- Open URL - https://11-silver.vercel.app/
+10:38:57.224 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: a[href='/decks']]}
+10:38:57.240 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We click on element [[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: a[href='/decks']]
+10:38:58.835 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> xpath: //h2[contains(text(),'Select a deck and tap it to begin training')]]}
+10:38:58.860 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- PASSED: TC03_startTrainingNavigation
+10:38:58.860 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- Stop test
+10:38:58.860 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- **********************************************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

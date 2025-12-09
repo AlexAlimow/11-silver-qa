@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.ait.SuperTutor.gui.tests.LoginUITest" tests="3" skipped="0" failures="1" errors="0" timestamp="2025-12-09T09:38:35.960Z" hostname="ALEX" time="20.606">
+  <properties/>
+  <testcase name="loginSuccessGoogleTest[0](AuthRequestDto(email=gmtestacc14@gmail.com, password=TestTest007!))" classname="de.ait.SuperTutor.gui.tests.LoginUITest" time="18.918">
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[type='password'] (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.31.0', revision: '1ef9f18787*'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'&#10;Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$vmLwxifL&#10;Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.66, fedcm:accounts: true, goog:processID: 3752, ms:edgeOptions: {debuggerAddress: localhost:64051}, msedge: {msedgedriverVersion: 142.0.3595.69 (0f9a54d682af..., userDataDir: C:\Users\gorlu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64051/devtoo..., se:cdpVersion: 143.0.3650.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 58913672af2c44d4708aad9f45c058b8" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[type='password'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: net.bytebuddy.renamed.java.lang.Object$ByteBuddy$vmLwxifL
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.66, fedcm:accounts: true, goog:processID: 3752, ms:edgeOptions: {debuggerAddress: localhost:64051}, msedge: {msedgedriverVersion: 142.0.3595.69 (0f9a54d682af..., userDataDir: C:\Users\gorlu\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64051/devtoo..., se:cdpVersion: 143.0.3650.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 58913672af2c44d4708aad9f45c058b8
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//de.ait.SuperTutor.gui.core.UIHelper.waitForVisibility(UIHelper.java:40)
+	at app//de.ait.SuperTutor.gui.core.UIHelper.type(UIHelper.java:30)
+	at app//de.ait.SuperTutor.gui.tests.LoginUITest.loginSuccessGoogleTest(LoginUITest.java:30)
+	at java.base@21.0.7/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at app//org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at app//org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at app//org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at app//org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at app//org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at app//org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at app//org.testng.TestRunner.run(TestRunner.java:614)
+	at app//org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at app//org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at app//org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at app//org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at app//org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at app//org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at app//org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at app//org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at app//org.testng.TestNG.runSuites(TestNG.java:1112)
+	at app//org.testng.TestNG.run(TestNG.java:1079)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:153)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:95)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base@21.0.7/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="loginSuccessMockTest" classname="de.ait.SuperTutor.gui.tests.LoginUITest" time="0.352"/>
+  <testcase name="loginTest[0](AuthRequestDto(email=gmtestacc14@gmail.com, password=TestTest007!))" classname="de.ait.SuperTutor.gui.tests.LoginUITest" time="0.588"/>
+  <system-out><![CDATA[10:38:35.213 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- Start test loginSuccessGoogleTest with data: [AuthRequestDto(email=gmtestacc14@gmail.com, password=TestTest007!)]
+10:38:35.229 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- Open URL - https://11-silver.vercel.app/
+10:38:35.962 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- Open URL - https://11-silver.vercel.app/
+10:38:36.174 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: svg.lucide-log-in]}
+10:38:36.220 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We click on element [[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: svg.lucide-log-in]
+10:38:39.532 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: input[type='email']]}
+10:38:40.279 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> xpath: //span[text()='Далее']]}
+10:38:40.427 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We click on element [[[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> xpath: //span[text()='Далее']]] -> xpath: ./ancestor::button]
+10:38:40.944 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: input[type='password']]}
+10:38:41.495 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: input[type='password']]}
+10:38:42.017 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: input[type='password']]}
+10:38:42.550 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: input[type='password']]}
+10:38:43.097 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: input[type='password']]}
+10:38:43.641 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: input[type='password']]}
+10:38:44.317 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> css selector: input[type='password']]}
+10:38:54.876 [Test worker] ERROR de.ait.SuperTutor.utils.MyListener -- Something went wrong!!!
+10:38:54.878 [Test worker] ERROR de.ait.SuperTutor.utils.MyListener -- ================================
+10:38:54.878 [Test worker] ERROR de.ait.SuperTutor.utils.MyListener -- Method public abstract org.openqa.selenium.WebElement org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)
+10:38:54.878 [Test worker] ERROR de.ait.SuperTutor.utils.MyListener -- ================================
+10:38:54.878 [Test worker] ERROR de.ait.SuperTutor.utils.MyListener -- Target EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)
+10:38:54.878 [Test worker] ERROR de.ait.SuperTutor.utils.MyListener -- ================================
+10:38:54.878 [Test worker] ERROR de.ait.SuperTutor.utils.MyListener -- Exeption null
+10:38:54.893 [Test worker] ERROR de.ait.SuperTutor.gui.core.TestBase -- FAILED: loginSuccessGoogleTest
+10:38:54.893 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- Stop test
+10:38:54.893 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- **********************************************************
+10:38:54.893 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- Start test loginSuccessMockTest with data: []
+10:38:54.893 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- Open URL - https://11-silver.vercel.app/
+10:38:55.403 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- Open URL - https://11-silver.vercel.app/
+10:38:55.687 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> xpath: /html/body/header/nav/div/div[2]/div/button/span]}
+10:38:55.712 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> xpath: /html/body/header/nav/div/div[2]/div/button/span]}
+10:38:55.755 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- PASSED: loginSuccessMockTest
+10:38:55.761 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- Stop test
+10:38:55.762 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- **********************************************************
+10:38:55.763 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- Start test loginTest with data: [AuthRequestDto(email=gmtestacc14@gmail.com, password=TestTest007!)]
+10:38:55.769 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- Open URL - https://11-silver.vercel.app/
+10:38:55.978 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- Open URL - https://11-silver.vercel.app/
+10:38:56.527 [Test worker] INFO  de.ait.SuperTutor.utils.MyListener -- We found element Decorated {[[EdgeDriver: MicrosoftEdge on windows (58913672af2c44d4708aad9f45c058b8)] -> xpath: /html/body/header/nav/div/div[2]/div/button/span]}
+10:38:56.566 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- PASSED: loginTest
+10:38:56.566 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- Stop test
+10:38:56.566 [Test worker] INFO  de.ait.SuperTutor.gui.core.TestBase -- **********************************************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

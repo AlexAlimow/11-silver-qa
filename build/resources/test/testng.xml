@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SuperTutorGuiSuite" verbose="1" parallel="false">
+
+    <parameter name="browser" value="chrome"/>
+
+    <test name="Login and HomePage Tests">
+        <classes>
+            <class name="de.ait.SuperTutor.gui.tests.LoginUITest"/>
+            <class name="de.ait.SuperTutor.gui.tests.HomePageButtonsTest"/>
+        </classes>
+    </test>
+
+    <test name="Start Training Navigation Test">
+        <classes>
+            <class name="de.ait.SuperTutor.gui.tests.StartTrainingTest"/>
+        </classes>
+    </test>
+
+</suite>

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class StartTrainingTest extends BaseLoginTest {
 
 
-    @Test
+    @Test(groups = {"regression"})
     public void TC03_startTrainingNavigation() {
 
         ui = new UIHelper(app.getDriver());
