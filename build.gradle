@@ -23,6 +23,13 @@ dependencies {
     implementation 'io.rest-assured:rest-assured:5.5.0'
     implementation 'mysql:mysql-connector-java:8.0.33'
     implementation 'com.google.code.gson:gson:2.11.0'
+
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.16.2'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.16.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.2'
+
+
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.16.2'
 }
 
 test {
