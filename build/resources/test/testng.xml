@@ -4,14 +4,26 @@
 
     <parameter name="browser" value="chrome"/>
 
+    <!-- Login и HomePage Tests -->
     <test name="Login and HomePage Tests">
+        <groups>
+            <run>
+                <include name="login"/>
+            </run>
+        </groups>
         <classes>
             <class name="de.ait.SuperTutor.gui.tests.LoginUITest"/>
             <class name="de.ait.SuperTutor.gui.tests.HomePageButtonsTest"/>
         </classes>
     </test>
 
+    <!-- Start Training Navigation Test -->
     <test name="Start Training Navigation Test">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
         <classes>
             <class name="de.ait.SuperTutor.gui.tests.StartTrainingTest"/>
         </classes>

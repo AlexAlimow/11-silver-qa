@@ -30,6 +30,11 @@ dependencies {
 
 
     testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.16.2'
+
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.23.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+
 }
 
 test {
