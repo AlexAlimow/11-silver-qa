@@ -26,6 +26,11 @@ public class UIHelper {
         WebElement element = waitForClickable(cssSelector);
         safeClick(element);
     }
+    public void clickByXpath(String xpath) {
+        WebElement element = waitForClickable(xpath);
+        element.click();
+    }
+
 
     public void type(String cssSelector, String text) {
         WebElement element = waitForVisibility(cssSelector);
@@ -49,9 +54,7 @@ public class UIHelper {
         return wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(cssSelector)));
     }
 
-    public WebElement waitForClickableId(String id) {
-        return wait.until(ExpectedConditions.elementToBeClickable(By.id(id)));
-    }
+
 
     public void waitForClickableId(String id, int seconds) {
         WebDriverWait customWait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
