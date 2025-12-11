@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.function.Function;
 
 public class UIHelper {
 
@@ -233,6 +234,16 @@ public class UIHelper {
         }
         script.append("return el;");
         return (WebElement) js.executeScript(script.toString());
+    }
+
+    public void waitTextNotEquals(WebElement element, String oldText) {
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(d -> !element.getText().trim().equals(oldText));
+    }
+
+    public void waitForCondition(Function<WebDriver, Boolean> condition) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(condition);
     }
 
 
