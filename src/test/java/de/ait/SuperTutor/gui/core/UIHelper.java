@@ -26,6 +26,7 @@ public class UIHelper {
         WebElement element = waitForClickable(cssSelector);
         safeClick(element);
     }
+
     public void clickByXpath(String xpath) {
         WebElement element = waitForClickable(xpath);
         element.click();
@@ -38,9 +39,6 @@ public class UIHelper {
         element.sendKeys(text);
     }
 
-    public void shouldBeVisible(String cssSelector) {
-        waitForVisibility(cssSelector);
-    }
 
     public WebElement waitForVisibility(String cssSelector) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(cssSelector)));
@@ -55,60 +53,10 @@ public class UIHelper {
     }
 
 
-
-    public void waitForClickableId(String id, int seconds) {
-        WebDriverWait customWait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-        customWait.until(ExpectedConditions.elementToBeClickable(By.id(id)));
-    }
-
-    public void waitForShadowElementClickable(String[] hostTags, String elementId, String visibleText, int seconds) {
-        WebDriverWait customWait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-        customWait.until(driver -> {
-            WebElement el = findNestedShadowElement(hostTags, elementId, visibleText);
-            return el != null && el.isDisplayed() && el.isEnabled();
-        });
-    }
-
-    public void clickShadowElement(String[] hostTags, String elementId, String visibleText, int timeoutSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
-
-        WebElement element = wait.until(driver -> {
-            try {
-                return findNestedShadowElement(hostTags, elementId, visibleText);
-            } catch (Exception e) {
-                return null;
-            }
-        });
-
-        if (element == null)
-            throw new RuntimeException("Shadow element not found: id=" + elementId);
-
-        element.click();
-    }
-
-    public boolean isElementVisible(String xpath) {
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    public void waitForElement(String xpath) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-    }
-
-
     public void waitForUrl(String partialUrl) {
         wait.until(ExpectedConditions.urlContains(partialUrl));
     }
 
-    public String getText(String cssSelector) {
-        return waitForVisibility(cssSelector).getText();
-    }
 
     public void clickById(String id) {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id(id)));
@@ -145,15 +93,6 @@ public class UIHelper {
         }
     }
 
-    public void clickNestedShadowElement(String[] hostTags, String elementId, String visibleText) {
-        WebElement element = findNestedShadowElement(hostTags, elementId, visibleText);
-        if (element != null) {
-            waitUntilClickable(element);
-            safeClick(element);
-        } else {
-            throw new RuntimeException("Элемент с id='" + elementId + "' внутри nested shadow DOM не найден или текст не совпадает");
-        }
-    }
 
     // =================== Универсальный метод клика ===================
 
@@ -218,30 +157,6 @@ public class UIHelper {
                 (visibleText != null ? "if(el && !el.textContent.includes('" + visibleText + "')) el=null;" : "") +
                 "return el;";
         return (WebElement) js.executeScript(script);
-    }
-
-    private WebElement findNestedShadowElement(String[] hostTags, String elementId, String visibleText) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        StringBuilder script = new StringBuilder();
-        script.append("let el = document.querySelector('").append(hostTags[0]).append("');\n");
-        script.append("if(!el) return null;\n");
-        script.append("el = el.shadowRoot;\n");
-        for (int i = 1; i < hostTags.length; i++) {
-            script.append("el = el.querySelector('").append(hostTags[i]).append("');\n");
-            script.append("if(!el) return null;\n");
-            script.append("el = el.shadowRoot;\n");
-        }
-        script.append("el = el.getElementById('").append(elementId).append("');\n");
-        if (visibleText != null) {
-            script.append("if(el && !el.textContent.includes('").append(visibleText).append("')) el=null;\n");
-        }
-        script.append("return el;");
-        return (WebElement) js.executeScript(script.toString());
-    }
-
-    public void waitTextNotEquals(WebElement element, String oldText) {
-        new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(d -> !element.getText().trim().equals(oldText));
     }
 
     public void waitForCondition(Function<WebDriver, Boolean> condition) {
