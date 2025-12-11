@@ -45,22 +45,6 @@ public class UIHelper {
         safeClick(element);
     }
 
-    public boolean waitForTextNotEquals(String cssSelector, String oldText) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        return wait.until(driver -> {
-            try {
-                String newText = driver.findElement(By.cssSelector(cssSelector)).getText();
-                return !newText.equals(oldText);
-            } catch (Exception e) {
-                return false;
-            }
-        });
-    }
-
-    public void waitAndClick(String cssSelector) {
-        WebElement element = waitForVisibility(cssSelector);
-        safeClick(element);
-    }
 
     public boolean waitForTextNotEquals(String cssSelector, String oldText) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
