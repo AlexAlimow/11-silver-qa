@@ -35,6 +35,12 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
     testImplementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
 
+
+    // OkHttp для HTTP-запросов к Firebase
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+
+    // JSON для работы с JSONObject
+    implementation 'org.json:json:20230227'
 }
 
 test {

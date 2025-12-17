@@ -1,9 +1,9 @@
 package de.ait.SuperTutor.gui.tests;
 
 import de.ait.SuperTutor.dto.AuthRequestDto;
+import de.ait.SuperTutor.gui.core.ApplicationManager;
 import de.ait.SuperTutor.gui.core.BaseLoginTest;
 import de.ait.SuperTutor.gui.core.UIHelper;
-import de.ait.SuperTutor.gui.core.ApplicationManager;
 import de.ait.SuperTutor.utils.MyDataProvider;
 import de.ait.SuperTutor.utils.TokenProvider;
 import org.openqa.selenium.JavascriptExecutor;
@@ -64,10 +64,10 @@ public class LoginUITest extends BaseLoginTest {
         ApplicationManager.logger.info("✔ loginSuccessMockTest завершён успешно");
     }
 
-    @Test(groups = {"login"}, dataProvider = "defaultUserData", dataProviderClass = MyDataProvider.class)
+    @Test(dataProvider = "defaultUserData", dataProviderClass = MyDataProvider.class)
     public void loginTest(AuthRequestDto user) {
 
-        ui = new UIHelper(app.getDriver());
+        UIHelper ui = new UIHelper(app.getDriver());
 
         ApplicationManager.logger.info("Step 1: Открываем сайт");
         app.getDriver().get("https://11-silver.vercel.app/");
@@ -82,8 +82,8 @@ public class LoginUITest extends BaseLoginTest {
             ui.type("input[type='password']", user.getPassword());
             ui.clickButtonByText("Далее");
         } else {
-            ApplicationManager.logger.info("Step 2: Мокнутый логин через TokenProvider");
-            String token = TokenProvider.getToken(user.getEmail());
+            ApplicationManager.logger.info("Step 2: Мокнутый логин через Firebase токен");
+            String token = TokenProvider.getFirebaseIdToken(user.getEmail(), user.getPassword());
             ((JavascriptExecutor) app.getDriver()).executeScript(
                     "window.localStorage.setItem('token', arguments[0]);", token
             );
@@ -99,3 +99,4 @@ public class LoginUITest extends BaseLoginTest {
         ApplicationManager.logger.info("✔ loginTest завершён успешно");
     }
 }
+
